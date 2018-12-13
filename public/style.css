@@ -2,11 +2,10 @@
 /* Variables */
 body {
     --white: #FFFFFF;
-    --light-main: #E2A192;
-    --med-main: #CC5B42;
-    --dark-main: #853523;
-    --black: #2B1712;
-    background-color: var(--white);
+    --light-main: #DDDDDD;
+    --med-main: #555555;
+    --dark-main: #333333;
+    --black: #000000;
 }
 
 /* Defaults */
