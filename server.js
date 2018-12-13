@@ -1,3 +1,6 @@
+/* Serves a single index file
+License: MIT see file 'LICENSE'
+*/
 const express = require('express');
 const app = express();
 
