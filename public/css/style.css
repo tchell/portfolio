@@ -1,0 +1,39 @@
+main {
+  border: thin solid black;
+  max-width: 1024px;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#navbar {
+  background-color: #303030;
+  width: 100%;
+}
+#navbar a {
+  color: #FFFFFF;
+}
+
+section h1 {
+  justify-self: start;
+}
+
+#about #headshot {
+  border-radius: 50%;
+}
+
+.project-container {
+  background-color: #dcdcdc;
+  padding: 10px;
+  margin: 10px 0;
+}
+.project-container h2 {
+  font-size: 1.5rem;
+}
+.project-container img {
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
