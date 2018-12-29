@@ -4,6 +4,10 @@ $light-main: #dcdcdc
 $med-main: #a9a9a9
 $dark-main: #808080
 $black: #303030
+$small: 576px
+$medium: 768px
+$large: 992px
+$xlarge: 1200px
 
 main
   border: thin solid black
@@ -14,7 +18,7 @@ main
   margin: 0 auto
 
 // Navbar
-#navbar
+nav
   background-color: $black
   width: 100%
   a
@@ -22,6 +26,7 @@ main
 
 // Align section headers to left
 section
+  padding-bottom: 20px
   h1
     justify-self: start
 
@@ -35,7 +40,48 @@ section
   background-color: $light-main
   padding: 10px
   margin: 10px 0
+  border-radius: 5px
   h2
     font-size: 1.5rem
-  img
-    margin: 0 auto
+
+.screenshot
+  border-bottom: thin solid $med-main
+  padding-bottom: 7px
+  @media (min-width: $small)
+    border-bottom: none
+    border-right: thin solid $med-main
+
+.description
+  border-top: thin solid $med-main
+  padding-top: 7px
+  @media (min-width: $small)
+    border-top: none
+    border-left: thin solid $med-main
+
+.technologies
+  display: flex
+  flex-flow: row wrap
+  margin: 0 auto
+  a
+    list-style: none
+    border-radius: 3px
+    background-color: $black
+    color: $white
+    padding: 2px 5px
+    text-align: center
+    margin: 1px 2px
+  a:hover
+    text-decoration: none
+    background-color: $dark-main
+
+#ed-list
+  margin: 0 auto
+  list-style-type: none
+  padding: 0
+  max-width: 90%
+  @media (min-width: $small)
+    width: 55%
+  @media (min-width: $large)
+    width: 50%
+  h2
+    font-size: 1.3rem

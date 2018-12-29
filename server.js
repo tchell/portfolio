@@ -3,14 +3,31 @@ License: MIT see file 'LICENSE'
 */
 const express = require('express');
 const app = express();
+const validator = require('express-validator');
+const bodyParser = require("body-parser");
+const contact = require('./routes/contact');
+
 
 const port = process.env.PORT || 3000;
 const index = __dirname + '/views/index.html';
 const static_content = __dirname + '/public';
-const bootstrap = __dirname + 'node_modules/bootstrap/dist/css/';
 
+const middleware = [
+    express.static(static_content),
+    express.static(__dirname + '/node_modules/bootstrap/dist/css'),
+    express.static(__dirname + '/node_modules/jquery/dist/'),
+    bodyParser.urlencoded({ extended: false }),
+    validator()
+    ];
+/*
 app.use(express.static(static_content));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use(express.static(__dirname + '/node_modules/jquery/dist/'));
+*/
+
+app.use(middleware);
+
+app.post('/submit', contact);
 
 app.get('/', (req, res) => {
     res.sendFile(index);

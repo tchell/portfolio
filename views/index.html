@@ -6,9 +6,14 @@
     <title>Tanner Chell</title>
     <link type="text/css" rel='stylesheet' href='/bootstrap.css'>
     <link type="text/css" rel='stylesheet' href='/css/style.css'>
+    <script src="/live.js" type="application/javascript"></script>
+    <!--
+    <script src="/jquery.js" type="application/javascript"></script>
+    -->
 </head>
 <body>
-    <nav id="navbar" class="navbar flex-row justify-content-center">
+    <nav class="navbar flex-row justify-content-center">
+        <a class="nav-link" href="#">Home</a>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#projects">Portfolio</a>
         <a class="nav-link" href="#education">Education</a>
@@ -41,18 +46,19 @@
                 <div class="row justify-content-around">
                     <div class="screenshot col-12 col-md-6 row justify-content-center">
                         <a class="" href="https://codepen.io/tchell/full/wxrMWL/" target="_blank">
-                            <img class="img-fluid" src="/image/markdown_preview.jpeg" alt="Product Landing page">
+                            <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1633856.wxrMWL.small.2afae702-7e8e-492e-a659-94240a05bed4.png" alt="Markdown Previewer">
                         </a>
                     </div>
                     <div class="description col-12 col-md-6">
                         <p>A way to test out markdown syntax with live formatting updates.</p>
-                        <ul>Build with:
-                            <li>Bootstrap</li>
-                            <li>jQuery</li>
-                            <li>React</li>
-                            <li>Redux</li>
-                            <li>Marked</li>
-                        </ul>
+                        <p class="mb-0">Build with:</p>
+                        <div class="technologies">
+                            <a class="" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                            <a class="" href="https://jquery.com/" target="_blank">jQuery</a>
+                            <a class="" href="https://reactjs.org/" target="_blank">React</a>
+                            <a class="" href="https://redux.js.org/" target="_blank">Redux</a>
+                            <a class="" href="https://github.com/markedjs/marked" target="_blank">Marked</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,31 +66,25 @@
                 <h2>Random Quotes</h2>
                 <div class="row justify-content-center">
                     <div class="screenshot col-12 col-md-6 row justify-content-center">
-                        <a class="" href="https://codepen.io/tchell/full/zaRrWy/">
-                            <img class="" src="/image/quote_machine.jpeg" alt="Technical Documentation page">
+                        <a class="" href="https://codepen.io/tchell/full/WKRadq/" target="_blank">
+                            <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1633856.WKRadq.small.4fa41c3b-f492-4985-b93f-0be3e4c41820.png" alt="Quote generator">
                         </a>
                     </div>
                     <div class="description col-12 col-md-6">
-                        <p>Quote machine</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project-container row justify-content-center">
-                <h2>Survey Page</h2>
-                <div class="row justify-content-center">
-                    <div class="screenshot col-12 col-md-6 row justify-content-center">
-                        <a class="" href="https://codepen.io/tchell/full/KeMVRr/">
-                            <img class="img-fluid" src="/image/survey.jpeg" alt="Survey page">
-                        </a>
-                    </div>
-                    <div class="description col-12 col-md-6">
-                        <p>Survey page</p>
+                        <p>Get a random quote to inspire you.</p>
+                        <p class="mb-0">Build with:</p>
+                        <div class="technologies">
+                            <a class="" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                            <a class="" href="https://jquery.com/" target="_blank">jQuery</a>
+                            <a class="" href="https://reactjs.org/" target="_blank">React</a>
+                            <a class="" href="https://redux.js.org/" target="_blank">Redux</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="education">
-            <h1>Education</h1>
+            <h1>education</h1>
             <div class="">
                 <ul id="ed-list" class="">
                     <li class="ed-list-item">
@@ -120,18 +120,28 @@
             </div>
         </section>
         <section id="contact">
-            <h1>Where to find me</h1>
-            <div id="link-container" class="">
-                <a id="profile-link" class="" href="https://github.com/tchell" target="_blank">
-                    <!--
-                    <img id="git-logo" src="https://image.flaticon.com/icons/svg/25/25231.svg">
-                    -->
+            <h1>get in touch</h1>
+            <div>
+                <a href="https://github.com/tchell" target="_blank">
+                    <img id="git-logo" class="img-fluid" src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="github" height="40" width="40">
                 </a>
             </div>
+            <form id="contact-form" action="/submit" method="post">
+                <label for="form-name">Name:</label>
+                <input id="form-name" type="text" name="name">
+                <label for="form-email">Email:</label>
+                <input id="form-email" type="email" name="email">
+                <label for="form-message">Message:</label>
+                <textarea id="form-message" type="text" name="message" required></textarea>
+                <input id="submit" type="submit" value="Submit">
+            </form>
         </section>
     </main>
     <footer>
         <p>by Tanner Chell</p>
     </footer>
 </body>
+<!--
+<script src="/js/submit.js" type="application/javascript"></script>
+-->
 </html>
