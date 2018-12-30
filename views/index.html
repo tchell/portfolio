@@ -6,13 +6,15 @@
     <title>Tanner Chell</title>
     <link type="text/css" rel='stylesheet' href='/bootstrap.css'>
     <link type="text/css" rel='stylesheet' href='/css/style.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lcgw4UUAAAAABSaNWd2KA0540-ssihIaDGkbBJl'></script>
     <script src="/live.js" type="application/javascript"></script>
 </head>
 <body>
     <nav class="navbar flex-row justify-content-center">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#projects">Portfolio</a>
+        <a class="nav-link" href="#"><span class="fas fa-home"></span><span class="sr-only">Home</span></a>
+        <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#education">Education</a>
         <a class="nav-link" href="#contact">Contact</a>
     </nav>
@@ -118,24 +120,47 @@
         </section>
         <section id="contact">
             <h1>get in touch</h1>
-            <div>
-                <a href="https://github.com/tchell" target="_blank">
-                    <img id="git-logo" class="img-fluid" src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="github" height="40" width="40">
-                </a>
+            <div class="row">
+                <form id="contact-form" class="col-sm" action="/submit" method="post">
+                    <h2>Send me an email</h2>
+                    <div class="form-group">
+                        <label for="form-name">Name:</label>
+                        <input id="form-name" class="form-control" type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">Email:</label>
+                        <input id="form-email" class="form-control" type="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Message:</label>
+                        <textarea id="form-message" class="form-control" type="text" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input id="submit" class="form-control" type="submit" value="Submit" class="btn">
+                        <div class="g-recaptcha" data-sitekey="6Lcgw4UUAAAAABSaNWd2KA0540-ssihIaDGkbBJl"></div>
+                    </div>
+                </form>
+                <div id="links" class="col-sm">
+                    <h2>Other stuff</h2>
+                    <a href="https://github.com/tchell" target="_blank">
+                        <span class="sr-only">Github</span>
+                        <img id="git-logo" class="img-fluid" src="/image/github.png" alt="github logo" height="40" width="40">
+                    </a>
+                    <a href="https://www.instagram.com/tchll/" target="_blank">
+                        <span class="sr-only">Instagram</span>
+                        <img id="ig-logo" class="img-fluid" src="/image/instagram.png" alt="Instagram logo">
+                    </a>
+                    <a href="https://www.freecodecamp.org/tchell" target="_blank">
+                        <span class="sr-only">free Code Camp</span>
+                        <img id="fcc-logo" src="/image/fcc.png" alt="freeCodeCamp logo">
+                    </a>
+                    <a href="https://codepen.io/tchell/" target="_blank">
+                        <span class="sr-only">Code Pen</span>
+                        <img src="/image/code-pen.png" alt="CodePen logo">
+                    </a>
+                </div>
             </div>
-            <form id="contact-form" action="/submit" method="post">
-                <label for="form-name">Name:</label>
-                <input id="form-name" type="text" name="name">
-                <label for="form-email">Email:</label>
-                <input id="form-email" type="email" name="email">
-                <label for="form-message">Message:</label>
-                <textarea id="form-message" type="text" name="message" required></textarea>
-                <input id="submit" type="submit" value="Submit">
-            </form>
         </section>
     </main>
-    <footer>
-        <p>by Tanner Chell</p>
-    </footer>
 </body>
 </html>

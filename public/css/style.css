@@ -1,6 +1,13 @@
 main {
-  border: thin solid black;
   max-width: 1024px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: disc;
 }
 
 .row {
@@ -14,10 +21,24 @@ nav {
 }
 nav a {
   color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+nav a:hover {
+  color: #FFFFFF;
+  background-color: #808080;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
 section {
-  padding-bottom: 20px;
+  padding-top: 40px;
 }
 section h1 {
   justify-self: start;
@@ -41,7 +62,7 @@ section h1 {
   border-bottom: thin solid #a9a9a9;
   padding-bottom: 7px;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .screenshot {
     border-bottom: none;
     border-right: thin solid #a9a9a9;
@@ -52,7 +73,7 @@ section h1 {
   border-top: thin solid #a9a9a9;
   padding-top: 7px;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .description {
     border-top: none;
     border-left: thin solid #a9a9a9;
@@ -96,6 +117,38 @@ section h1 {
 }
 #ed-list h2 {
   font-size: 1.3rem;
+}
+
+#contact {
+  padding-bottom: 20px;
+}
+
+#contact-form {
+  max-width: 576px;
+  margin: auto;
+}
+#contact-form #form-name, #contact-form #form-email {
+  max-width: 15em;
+}
+#contact-form #form-message {
+  max-width: 30em;
+  min-height: 10em;
+}
+#contact-form #submit {
+  max-width: 7em;
+}
+
+#links a {
+  padding: 10px;
+}
+#links a:hover {
+  text-decoration: none;
+}
+#links img {
+  width: 32px;
+}
+#links #fcc-logo {
+  background-color: #006400;
 }
 
 /*# sourceMappingURL=style.css.map */
