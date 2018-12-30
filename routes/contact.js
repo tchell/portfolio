@@ -1,22 +1,11 @@
 // Contact form module
 const express = require('express');
-const { body, validationResult } = require('express-validator/check');
-// const { sanitizeBody } = require('express-validator/filter');
+const nodemailer = require('nodemailer');
+const clientID = require('../client_id');
 const router = express.Router();
 
 router.post('/submit', [
-    /*
-    body('email')
-        .isEmail()
-        .normalizeEmail(),
-    body('text')
-        .not().isEmpty()
-        .trim()
-        .escape(),
-        */
     (req, res) => {
-        req.checkBody('email', 'Enter a valid email address.')
-            .isEmail();
         req.sanitizeBody('email')
             .normalizeEmail()
             .trim();
@@ -25,9 +14,35 @@ router.post('/submit', [
             .trim();
         let errors = req.validationErrors();
         if (errors) {
-            res.send(errors);
+            res.redirect('/#contact');
         } else {
-            console.log(req.url, req.body.message);
+            const smtpTransport = nodemailer.createTransport({
+                service: "Gmail",
+                auth: {
+                    type: "OAuth2",
+                    user: "tanner.chell@gmail.com",
+                    clientId: clientID.client_id,
+                    clientSecret: clientID.client_secret,
+                    refreshToken: clientID.refresh
+                }
+            });
+            let message = "from: " + req.body.email + "\n\r" + req.body.message;
+            let mailOptions = {
+                from: req.body.email,
+                to: "tanner.chell@gmail.com",
+                subject: "New message from " + req.body.name,
+                text: message,
+                html: message
+            };
+
+            smtpTransport.sendMail(mailOptions, (err, response) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log(response)
+                }
+                smtpTransport.close();
+            });
             res.redirect('/#contact');
         }
     }]
