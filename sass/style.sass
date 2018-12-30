@@ -10,8 +10,11 @@ $large: 992px
 $xlarge: 1200px
 
 main
-  border: thin solid black
   max-width: 1024px
+h2
+  font-size: 1.5rem
+ul
+  list-style: disc
 
 .row
   width: 100%
@@ -23,10 +26,22 @@ nav
   width: 100%
   a
     color: $white
+    margin: 0
+    padding: 0
+  a:hover
+    color: $white
+    background-color: $dark-main
+
+.navbar
+  position: fixed
+  top: 0
+  z-index: 1
+  margin: 0
+  padding: 0
 
 // Align section headers to left
 section
-  padding-bottom: 20px
+  padding-top: 40px
   h1
     justify-self: start
 
@@ -47,14 +62,14 @@ section
 .screenshot
   border-bottom: thin solid $med-main
   padding-bottom: 7px
-  @media (min-width: $small)
+  @media (min-width: $medium)
     border-bottom: none
     border-right: thin solid $med-main
 
 .description
   border-top: thin solid $med-main
   padding-top: 7px
-  @media (min-width: $small)
+  @media (min-width: $medium)
     border-top: none
     border-left: thin solid $med-main
 
@@ -85,3 +100,27 @@ section
     width: 50%
   h2
     font-size: 1.3rem
+
+#contact
+  padding-bottom: 20px
+#contact-form
+  max-width: $small
+  margin: auto
+  #form-name, #form-email
+    max-width: 15em
+  #form-message
+    max-width: 30em
+    min-height: 10em
+
+  #submit
+    max-width: 7em
+
+#links
+  a
+    padding: 10px
+  a:hover
+    text-decoration: none
+  img
+    width: 32px
+  #fcc-logo
+    background-color: #006400

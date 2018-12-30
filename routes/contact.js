@@ -26,9 +26,12 @@ router.post('/submit', [
                     refreshToken: clientID.refresh
                 }
             });
-            let message = "from: " + req.body.email + "\n\r" + req.body.message;
+            let message = "from: " + req.body.name + " (" + req.body.email + ")<br>\n\r" + req.body.message;
             let mailOptions = {
-                from: req.body.email,
+                from: {
+                    name: req.body.name,
+                    address: req.body.email
+                },
                 to: "tanner.chell@gmail.com",
                 subject: "New message from " + req.body.name,
                 text: message,
