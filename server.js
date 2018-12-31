@@ -19,11 +19,6 @@ const middleware = [
     bodyParser.urlencoded({ extended: false }),
     validator()
     ];
-/*
-app.use(express.static(static_content));
-app.use(express.static(__dirname + '/node_modules/bootstrap/dist/css'));
-app.use(express.static(__dirname + '/node_modules/jquery/dist/'));
-*/
 
 app.use(middleware);
 
