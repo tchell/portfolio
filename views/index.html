@@ -4,59 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Tanner Chell</title>
-    <link type="text/css" rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
-    <link type="text/css" rel='stylesheet' href='/style.css'>
+    <link type="text/css" rel='stylesheet' href='/bootstrap.css'>
+    <link type="text/css" rel='stylesheet' href='/css/style.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lcgw4UUAAAAABSaNWd2KA0540-ssihIaDGkbBJl'></script>
+    <script src="/live.js" type="application/javascript"></script>
 </head>
 <body>
-<div id="master">
-    <nav id="navbar" class="flex-center">
-        <a class="nav-link" href="#welcome-section">About</a>
-        <a class="nav-link" href="#projects">Portfolio</a>
+    <nav class="navbar flex-row justify-content-center">
+        <a class="nav-link" href="#"><span class="fas fa-home"></span><span class="sr-only">Home</span></a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#education">Education</a>
         <a class="nav-link" href="#contact">Contact</a>
     </nav>
-    <main>
-        <section id="welcome-section" class="flex-center">
+    <main class="container-fluid">
+        <section id="about" class="container">
             <h1>about me</h1>
-            <img id="headshot" src="/image/headshot.jpg" alt="Picture of Tanner">
-            <p>Student. Procrastinator. Cliche.</p>
-            <p>I make stuff. It probably works and might look good.</p>
-            <hr>
-            <p>New to programming and really new to web-development. I've worked with Python, C, MIPS assembly, and now a little bit of the basic web technologies.</p>
-            <p>For fun I like to get outdoors and go hiking, camping, fishing, paddling, climbing, snowboarding, or mountain biking. When stuck indoors I play Elder Scrolls, LOL, Age of Empires, or just read.</p>
+            <div class="row justify-content-center">
+                <div class="col-sm-4 order-2 order-sm-1">
+                    <img class="img-fluid" id="headshot" src="/image/headshot.jpg" alt="Picture of Tanner">
+                </div>
+                <div class="col-sm-8 order-1 order-sm-2">
+                    <p>
+                        Currently an undergraduate student at the University of Alberta doing a Bachelor of Science.
+                    </p>
+                    <p>
+                        My hobbies include rock climbing, mountain biking, snowboarding, cross country skiing, camping, hiking and just about anything else outdoors.
+                    </p>
+                    <p>
+                        I like the indoors too though and do lots of reading, gaming, and mess around with my Arduino and Raspberry Pi once in a while.
+                    </p>
+                </div>
+            </div>
         </section>
-        <section class="" id="projects">
-            <h1>Some things I've made</h1>
-            <div id="project-container" class="flex-center">
-                <div class="project-tile ">
-                    <a class="project-link" href="https://codepen.io/tchell/full/KeyPrV/" target="_blank">
-                        <img class="project-img" src="/image/markdown_preview.jpeg" alt="Product Landing page">
-                        <p class="label">Product Landing page</p>
-                    </a>
+        <section id="projects" class="container">
+            <h1>projects</h1>
+            <div class="project-container row justify-content-center">
+                <h2>Markdown Previewer</h2>
+                <div class="row justify-content-around">
+                    <div class="screenshot col-12 col-md-6 row justify-content-center">
+                        <a class="" href="https://codepen.io/tchell/full/wxrMWL/" target="_blank">
+                            <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1633856.wxrMWL.small.2afae702-7e8e-492e-a659-94240a05bed4.png" alt="Markdown Previewer">
+                        </a>
+                    </div>
+                    <div class="description col-12 col-md-6">
+                        <p>A way to test out markdown syntax with live formatting updates.</p>
+                        <p class="mb-0">Build with:</p>
+                        <div class="technologies">
+                            <a class="" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                            <a class="" href="https://jquery.com/" target="_blank">jQuery</a>
+                            <a class="" href="https://reactjs.org/" target="_blank">React</a>
+                            <a class="" href="https://redux.js.org/" target="_blank">Redux</a>
+                            <a class="" href="https://github.com/markedjs/marked" target="_blank">Marked</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-tile ">
-                    <a class="project-link" href="https://codepen.io/tchell/full/KeMVRr/">
-                        <img class="project-img" src="/image/survey.jpeg" alt="Survey page">
-                        <p>Survey page</p>
-                    </a>
+            </div>
+            <div class="project-container row justify-content-center">
+                <h2>Random Quotes</h2>
+                <div class="row justify-content-center">
+                    <div class="screenshot col-12 col-md-6 row justify-content-center">
+                        <a class="" href="https://codepen.io/tchell/full/WKRadq/" target="_blank">
+                            <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1633856.WKRadq.small.4fa41c3b-f492-4985-b93f-0be3e4c41820.png" alt="Quote generator">
+                        </a>
+                    </div>
+                    <div class="description col-12 col-md-6">
+                        <p>Get a random quote to inspire you.</p>
+                        <p class="mb-0">Build with:</p>
+                        <div class="technologies">
+                            <a class="" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                            <a class="" href="https://jquery.com/" target="_blank">jQuery</a>
+                            <a class="" href="https://reactjs.org/" target="_blank">React</a>
+                            <a class="" href="https://redux.js.org/" target="_blank">Redux</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-tile ">
-                    <a class="project-link" href="https://codepen.io/tchell/full/zaRrWy/">
-                        <img class="project-img" src="/image/quote_machine.jpeg" alt="Technical Documentation page">
-                        <p>Technical Documentation Page</p>
-                    </a>
-                </div>
+            </div>
+        </section>
+        <section id="education">
+            <h1>education</h1>
+            <div class="">
+                <ul id="ed-list" class="">
+                    <li class="ed-list-item">
+                        <h2>University of Alberta</h2>
+                        <ul class="">
+                            <li class="">Bachelor of Science in Biology (June 2019)</li>
+                            <li>Minor in Computer Science</li>
+                        </ul>
+                    </li>
+                    <hr>
+                    <li class="ed-list-item">
+                        <h2>Free Code Camp</h2>
+                        <ul>
+                            <li>
+                                <a href="http://www.freecodecamp.org/certification/tchell/responsive-web-design" target="_blank">
+                                    Responsive Web Design Certificate
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <hr>
+                    <li class="ed-list-item">
+                        <h2>Free Code Camp</h2>
+                        <ul>
+                            <li>
+                                <a href="https://www.freecodecamp.org/certification/tchell/javascript-algorithms-and-data-structures" target="_blank">
+                                    Javascript Algorithms and Data Structures Certificate
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </section>
         <section id="contact">
-            <h1>Where to find me</h1>
-            <div id="link-container" class="flex-center">
-                <a id="profile-link" class="personal-link" href="https://github.com/tchell" target="_blank"><img id="git-logo" src="https://image.flaticon.com/icons/svg/25/25231.svg"></a>
+            <h1>get in touch</h1>
+            <div class="row">
+                <form id="contact-form" class="col-sm" action="/submit" method="post">
+                    <h2>Send me an email</h2>
+                    <div class="form-group">
+                        <label for="form-name">Name:</label>
+                        <input id="form-name" class="form-control" type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">Email:</label>
+                        <input id="form-email" class="form-control" type="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Message:</label>
+                        <textarea id="form-message" class="form-control" type="text" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input id="submit" class="form-control" type="submit" value="Submit" class="btn">
+                        <div class="g-recaptcha" data-sitekey="6Lcgw4UUAAAAABSaNWd2KA0540-ssihIaDGkbBJl"></div>
+                    </div>
+                </form>
+                <div id="links" class="col-sm">
+                    <h2>Other stuff</h2>
+                    <a href="https://github.com/tchell" target="_blank">
+                        <span class="sr-only">Github</span>
+                        <img id="git-logo" class="img-fluid" src="/image/github.png" alt="github logo" height="40" width="40">
+                    </a>
+                    <a href="https://www.instagram.com/tchll/" target="_blank">
+                        <span class="sr-only">Instagram</span>
+                        <img id="ig-logo" class="img-fluid" src="/image/instagram.png" alt="Instagram logo">
+                    </a>
+                    <a href="https://www.freecodecamp.org/tchell" target="_blank">
+                        <span class="sr-only">free Code Camp</span>
+                        <img id="fcc-logo" src="/image/fcc.png" alt="freeCodeCamp logo">
+                    </a>
+                    <a href="https://codepen.io/tchell/" target="_blank">
+                        <span class="sr-only">Code Pen</span>
+                        <img src="/image/code-pen.png" alt="CodePen logo">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>by Tanner Chell</p>
-    </footer>
-</div>
 </body>
 </html>

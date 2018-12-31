@@ -1,0 +1,154 @@
+main {
+  max-width: 1024px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #303030;
+  width: 100%;
+}
+nav a {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+nav a:hover {
+  color: #FFFFFF;
+  background-color: #808080;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding-top: 40px;
+}
+section h1 {
+  justify-self: start;
+}
+
+#about #headshot {
+  border-radius: 50%;
+}
+
+.project-container {
+  background-color: #dcdcdc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.project-container h2 {
+  font-size: 1.5rem;
+}
+
+.screenshot {
+  border-bottom: thin solid #a9a9a9;
+  padding-bottom: 7px;
+}
+@media (min-width: 768px) {
+  .screenshot {
+    border-bottom: none;
+    border-right: thin solid #a9a9a9;
+  }
+}
+
+.description {
+  border-top: thin solid #a9a9a9;
+  padding-top: 7px;
+}
+@media (min-width: 768px) {
+  .description {
+    border-top: none;
+    border-left: thin solid #a9a9a9;
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+.technologies a {
+  list-style: none;
+  border-radius: 3px;
+  background-color: #303030;
+  color: #FFFFFF;
+  padding: 2px 5px;
+  text-align: center;
+  margin: 1px 2px;
+}
+.technologies a:hover {
+  text-decoration: none;
+  background-color: #808080;
+}
+
+#ed-list {
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+  max-width: 90%;
+}
+@media (min-width: 576px) {
+  #ed-list {
+    width: 55%;
+  }
+}
+@media (min-width: 992px) {
+  #ed-list {
+    width: 50%;
+  }
+}
+#ed-list h2 {
+  font-size: 1.3rem;
+}
+
+#contact {
+  padding-bottom: 20px;
+}
+
+#contact-form {
+  max-width: 576px;
+  margin: auto;
+}
+#contact-form #form-name, #contact-form #form-email {
+  max-width: 15em;
+}
+#contact-form #form-message {
+  max-width: 30em;
+  min-height: 10em;
+}
+#contact-form #submit {
+  max-width: 7em;
+}
+
+#links a {
+  padding: 10px;
+}
+#links a:hover {
+  text-decoration: none;
+}
+#links img {
+  width: 32px;
+}
+#links #fcc-logo {
+  background-color: #006400;
+}
+
+/*# sourceMappingURL=style.css.map */

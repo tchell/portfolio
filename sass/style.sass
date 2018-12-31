@@ -1,0 +1,128 @@
+// Variables
+$white: #FFFFFF
+$light-main: #dcdcdc
+$med-main: #a9a9a9
+$dark-main: #808080
+$black: #303030
+$small: 576px
+$medium: 768px
+$large: 992px
+$xlarge: 1200px
+
+main
+  max-width: 1024px
+h2
+  font-size: 1.5rem
+ul
+  list-style: disc
+
+.row
+  width: 100%
+  margin: 0 auto
+
+// Navbar
+nav
+  background-color: $black
+  width: 100%
+  a
+    color: $white
+    margin: 0
+    padding: 0
+  a:hover
+    color: $white
+    background-color: $dark-main
+
+.navbar
+  position: fixed
+  top: 0
+  z-index: 1
+  margin: 0
+  padding: 0
+
+// Align section headers to left
+section
+  padding-top: 40px
+  h1
+    justify-self: start
+
+// about
+#about
+  #headshot
+    border-radius: 50%
+
+// projects
+.project-container
+  background-color: $light-main
+  padding: 10px
+  margin: 10px 0
+  border-radius: 5px
+  h2
+    font-size: 1.5rem
+
+.screenshot
+  border-bottom: thin solid $med-main
+  padding-bottom: 7px
+  @media (min-width: $medium)
+    border-bottom: none
+    border-right: thin solid $med-main
+
+.description
+  border-top: thin solid $med-main
+  padding-top: 7px
+  @media (min-width: $medium)
+    border-top: none
+    border-left: thin solid $med-main
+
+.technologies
+  display: flex
+  flex-flow: row wrap
+  margin: 0 auto
+  a
+    list-style: none
+    border-radius: 3px
+    background-color: $black
+    color: $white
+    padding: 2px 5px
+    text-align: center
+    margin: 1px 2px
+  a:hover
+    text-decoration: none
+    background-color: $dark-main
+
+// Education
+#ed-list
+  margin: 0 auto
+  list-style-type: none
+  padding: 0
+  max-width: 90%
+  @media (min-width: $small)
+    width: 55%
+  @media (min-width: $large)
+    width: 50%
+  h2
+    font-size: 1.3rem
+
+// Contact
+#contact
+  padding-bottom: 20px
+#contact-form
+  max-width: $small
+  margin: auto
+  #form-name, #form-email
+    max-width: 15em
+  #form-message
+    max-width: 30em
+    min-height: 10em
+
+  #submit
+    max-width: 7em
+
+#links
+  a
+    padding: 10px
+  a:hover
+    text-decoration: none
+  img
+    width: 32px
+  #fcc-logo
+    background-color: #006400
