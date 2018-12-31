@@ -1,3 +1,6 @@
+/* Receives and processes POST from contact from
+License: MIT see file 'LICENSE'
+*/
 // Contact form module
 const express = require('express');
 const nodemailer = require('nodemailer');
