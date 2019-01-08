@@ -72,12 +72,14 @@ section
   @media (min-width: $medium)
     border-top: none
     border-left: thin solid $med-main
+    p
+      margin: 50px auto
 
 .technologies
   display: flex
   flex-flow: row wrap
   margin: 0 auto
-  a
+  span
     list-style: none
     border-radius: 3px
     background-color: $black
@@ -85,9 +87,6 @@ section
     padding: 2px 5px
     text-align: center
     margin: 1px 2px
-  a:hover
-    text-decoration: none
-    background-color: $dark-main
 
 // Education
 #ed-list
