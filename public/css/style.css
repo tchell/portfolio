@@ -78,6 +78,9 @@ section h1 {
     border-top: none;
     border-left: thin solid #a9a9a9;
   }
+  .description p {
+    margin: 50px auto;
+  }
 }
 
 .technologies {
@@ -85,7 +88,7 @@ section h1 {
   flex-flow: row wrap;
   margin: 0 auto;
 }
-.technologies a {
+.technologies span {
   list-style: none;
   border-radius: 3px;
   background-color: #303030;
@@ -93,10 +96,6 @@ section h1 {
   padding: 2px 5px;
   text-align: center;
   margin: 1px 2px;
-}
-.technologies a:hover {
-  text-decoration: none;
-  background-color: #808080;
 }
 
 #ed-list {
