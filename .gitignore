@@ -3,3 +3,5 @@
 node_modules/
 # Gmail API info
 client_id.json
+# logs
+*.log
