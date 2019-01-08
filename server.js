@@ -7,7 +7,11 @@ const validator = require('express-validator');
 const bodyParser = require("body-parser");
 const contact = require('./routes/contact');
 const fs = require('fs');
+const projects = require('./projects');
 
+
+app.set('views', './views');
+app.set('view engine', 'pug');
 
 const port = process.env.PORT || 3000;
 const index = __dirname + '/views/index.html';
@@ -30,7 +34,7 @@ app.use('/', (req, res, next) => {
         if (err) {
             console.log(err);
         } else {
-            console.log("New " + req.method + " request logged...", data);
+            console.log("New " + req.method + " request logged...", req.path);
         }
     });
     next();
@@ -49,7 +53,7 @@ app.use(middleware);
 app.post('/submit', contact);
 
 app.get('/', (req, res) => {
-    res.sendFile(index);
+    res.render('index', {projects_json: projects});
 });
 
 app.listen(port, () => {
