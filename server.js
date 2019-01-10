@@ -22,7 +22,8 @@ app.enable('trust proxy');
 // log all requests
 app.use('/', (req, res, next) => {
     let log_file;
-    let new_line = req.method + ' ' + req.path + ' - ' + req.ip + '\n';
+    let new_line = Date() + ' ' + req.method + ' ' + req.path + ' - ' + req.ip 
+                        + '\n';
     if (req.method === 'POST') {
         log_file = '.post_request.log';
     } else if (req.path === '/') {
