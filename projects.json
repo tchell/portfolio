@@ -1,0 +1,23 @@
+{
+  "pomodoro": {
+    "name": "Pomodoro Clock",
+    "desc": "Pomodoro clock with customizable time settings for breaks and work sessions.",
+    "techs": ["React", "Redux", "Sass", "Node", "Express", "Heroku"],
+    "link": "https://pomodoro.tancloud.host",
+    "img":"/image/pomodoro.png"
+  },
+  "calculator": {
+    "name": "Javascript Calculator",
+    "desc": "Simple javascript calculator for doing quick, basic math.",
+    "techs": ["React", "Redux", "Sass", "Node", "Express", "Heroku"],
+    "link": "https://calculator.tancloud.host",
+    "img": "/image/calculator.png"
+  },
+  "markdown": {
+    "name": "Markdown Previewer",
+    "desc": "A way to write Markdown and see it rendered as HTML live side by side.",
+    "techs": ["React", "Scss", "Bootstrap", "Marked.js", "jQuery"],
+    "link": "https://codepen.io/tchell/full/wxrMWL/",
+    "img": "https://s3-us-west-2.amazonaws.com/i.cdpn.io/1633856.wxrMWL.small.2afae702-7e8e-492e-a659-94240a05bed4.png"
+  }
+}
