@@ -1,4 +1,3 @@
-//test comment
 /* Serves a single index file
 License: MIT see file 'LICENSE'
 */
