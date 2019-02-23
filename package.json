@@ -19,7 +19,7 @@
   "homepage": "https://github.com/tchell/portfolio#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
     "nodemailer": "^5.1.1",
@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10",
-    "sass": "^1.17.0"
+    "sass": "^1.17.2"
   }
 }
