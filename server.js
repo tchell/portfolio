@@ -15,7 +15,6 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 const port = process.env.PORT || 3000;
-const index = __dirname + '/views/index.html';
 const static_content = __dirname + '/public';
 
 app.enable('trust proxy');
