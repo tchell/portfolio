@@ -4,7 +4,7 @@ License: MIT see file 'LICENSE'
 // Contact form module
 const express = require('express');
 const nodemailer = require('nodemailer');
-const clientID = require('../client_id');
+const keys = require('../keys');
 const router = express.Router();
 
 router.post('/submit', [
@@ -23,10 +23,10 @@ router.post('/submit', [
                 service: "Gmail",
                 auth: {
                     type: "OAuth2",
-                    user: "tanner.chell@gmail.com",
-                    clientId: clientID.client_id,
-                    clientSecret: clientID.client_secret,
-                    refreshToken: clientID.refresh
+                    user: keys.email,
+                    clientId: keys.client_id,
+                    clientSecret: keys.client_secret,
+                    refreshToken: keys.refresh
                 }
             });
             let message = "from: " + req.body.name + " (" + req.body.email + ")<br>\n\r" + req.body.message;
@@ -35,7 +35,7 @@ router.post('/submit', [
                     name: req.body.name,
                     address: req.body.email
                 },
-                to: "tanner.chell@gmail.com",
+                to: keys.email,
                 subject: "New message from " + req.body.name,
                 text: message,
                 html: message

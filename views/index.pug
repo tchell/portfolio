@@ -24,7 +24,8 @@ html(lang='en')
         link(type='text/css', rel='stylesheet', href='/css/style.css')
         link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.6.3/css/solid.css', integrity='sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G', crossorigin='anonymous')
         link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css', integrity='sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0', crossorigin='anonymous')
-        script(src='https://www.google.com/recaptcha/api.js?render=6Lcgw4UUAAAAABSaNWd2KA0540-ssihIaDGkbBJl')
+        script(src='/jquery.js')
+        script(src='/js/contact.js')
     body
         nav.navbar.flex-row.justify-content-center
             a.nav-link(href='/')
@@ -96,8 +97,10 @@ html(lang='en')
                             label(for='form-message') Message:
                             textarea#form-message.form-control(type='text', name='message', required='')
                         .form-group
-                            input#submit.form-control(type='submit', value='Submit')
-                            .g-recaptcha(data-sitekey='6Lcgw4UUAAAAABSaNWd2KA0540-ssihIaDGkbBJl')
+                            form(action="?", method="post")
+                                div#recaptcha.g-recaptcha(data-callback="recaptchaCompleted" data-sitekey="6LdvjpkUAAAAAE6HxyvlRUQYjEITWoNzEqy-TZTE")
+                            input#submit.form-control(type='submit', value='Submit' disabled)
+                    script(src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit' async defer)
                     #links.col-sm
                         h2 Other stuff
                         a(href='https://github.com/tchell', target='_blank' rel="noopener noreferrer")
