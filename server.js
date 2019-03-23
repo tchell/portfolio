@@ -44,7 +44,7 @@ app.use('/', (req, res, next) => {
 const middleware = [
     express.static(static_content),
     express.static(__dirname + '/node_modules/bootstrap/dist/css'),
-    express.static(__dirname + '/node_modules/jquery/dist/'),
+    express.static(__dirname + '/node_modules/jquery/dist'),
     bodyParser.urlencoded({ extended: false }),
     validator()
     ];
