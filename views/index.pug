@@ -6,7 +6,7 @@ mixin project(attrs)
         .row.justify-content-around
             .screenshot.col-12.col-md-6.row.justify-content-center
                 a(href=attrs.link, target='_blank' rel="noopener noreferrer")
-                    img.img-fluid(src=attrs.img, alt=attrs.name)
+                    img.img-fluid(src=attrs.img, alt=attrs.name, style="max-height:640px;")
             .description.col-12.col-md-6
                 p=attrs.desc
                 p.mb-0 Built with:
@@ -58,7 +58,7 @@ html(lang='en')
                         li.ed-list-item
                             h2 University of Alberta
                             ul
-                                li Bachelor of Science in Biology (June 2019)
+                                li Bachelor of Science in Biology (April 2019)
                                 li Minor in Computer Science
                         hr
                         li.ed-list-item
