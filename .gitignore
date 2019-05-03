@@ -5,3 +5,4 @@ node_modules/
 keys.json
 # logs
 *.log
+keys.json
