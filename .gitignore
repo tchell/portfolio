@@ -2,7 +2,7 @@
 .idea/
 node_modules/
 # Gmail API info
-client_id.json
+keys.json
 # logs
 *.log
 keys.json
