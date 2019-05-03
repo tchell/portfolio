@@ -15,7 +15,6 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 const port = process.env.PORT || 3000;
-const index = __dirname + '/views/index.html';
 const static_content = __dirname + '/public';
 
 app.enable('trust proxy');
@@ -45,7 +44,7 @@ app.use('/', (req, res, next) => {
 const middleware = [
     express.static(static_content),
     express.static(__dirname + '/node_modules/bootstrap/dist/css'),
-    express.static(__dirname + '/node_modules/jquery/dist/'),
+    express.static(__dirname + '/node_modules/jquery/dist'),
     bodyParser.urlencoded({ extended: false }),
     validator()
     ];
