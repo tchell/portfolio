@@ -18,15 +18,16 @@
   },
   "homepage": "https://github.com/tchell/portfolio#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
+    "jquery": "^3.4.1",
     "nodemailer": "^5.1.1",
     "pug": "^2.0.3"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10",
-    "sass": "^1.17.2"
+    "nodemon": "^1.19.0",
+    "sass": "^1.19.0"
   }
 }

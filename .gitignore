@@ -5,3 +5,4 @@ node_modules/
 client_id.json
 # logs
 *.log
+keys.json
