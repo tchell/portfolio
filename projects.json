@@ -1,38 +1,34 @@
 {
+  "cambire": {
+    "name": "Cambire",
+    "desc": "Automation of a custom stock valuation algorithm to pull data on all stocks from the NYSE, NASDAQ, and TSX and analyze it. Displays results via web UI that allows querying for different fundamental values and viewing detailed reports on sepecific companies.",
+    "techs": ["Python", "Django", "React", "Redux"],
+    "img": ""
+  },
+  "feed_mill": {
+    "name": "Feed Mill",
+    "desc": "An automated system to allow making animal feed from preset recipes. Users can set up a recipe with the ingredient amounts and the rest is handled automatically. Backend logic uses Loxone to manage making recipes. Users use a custom web UI to interact and view the status of recipes in progress.",
+    "techs": ["Node", "Express", "React", "Redux", "Mongodb", "Loxone"],
+    "img": "/image/feed_mill_demo.mp4"
+  },
   "quick_meals": {
     "name": "QuickMeals",
     "desc": "An app for getting quick meal suggestions when you don't know what to make. Built for the Flutter Create contest. Currently only works on Android.",
-    "techs": [
-      "Flutter"
-    ],
+    "techs": ["Flutter"],
     "link": "https://github.com/tchell/QuickMeals",
-    "img": "image/demo.gif"
+    "img": "/image/quickmeals_demo.gif"
   },
   "pomodoro": {
     "name": "Pomodoro Clock",
     "desc": "Pomodoro clock with customizable time settings for breaks and work sessions.",
-    "techs": [
-      "React",
-      "Redux",
-      "Sass",
-      "Node",
-      "Express",
-      "Heroku"
-    ],
+    "techs": ["React", "Redux", "Sass", "Node", "Express", "Heroku"],
     "link": "https://pomodoro.tancloud.host",
     "img": "/image/pomodoro.png"
   },
   "calculator": {
     "name": "Javascript Calculator",
     "desc": "Simple javascript calculator for doing quick, basic math.",
-    "techs": [
-      "React",
-      "Redux",
-      "Sass",
-      "Node",
-      "Express",
-      "Heroku"
-    ],
+    "techs": ["React", "Redux", "Sass", "Node", "Express", "Heroku"],
     "link": "https://calculator.tancloud.host",
     "img": "/image/calculator.png"
   }
