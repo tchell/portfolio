@@ -1,3 +1,8 @@
+# Large Files
+*.png
+*.jpg
+*.gif
+*.mp4
 
 .idea/
 .vscode/
