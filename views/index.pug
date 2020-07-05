@@ -4,9 +4,18 @@ mixin project(attrs)
     .project-container.row.justify-content-center
         h2=attrs.name
         .row.justify-content-around
-            .screenshot.col-12.col-md-6.row.justify-content-center
+            .screenshot.col-12.col-md-6.row.justify-content-center.align-items-center
                 a(href=attrs.link, target='_blank' rel="noopener noreferrer")
-                    img.img-fluid(src=attrs.img, alt=attrs.name, style="max-height:640px;")
+                    if attrs.img === ""
+                        div.img-fluid Preview Not Available
+                    else if attrs.img.endsWith(".mp4")
+                        video(controls).img-fluid
+                            source(src=attrs.img, type="video/mp4",
+                            style="max-height:640px;")
+
+                    else
+                        img.img-fluid(src=attrs.img, alt=attrs.name, 
+                            style="max-height:640px;")
             .description.col-12.col-md-6
                 p=attrs.desc
                 p.mb-0 Built with:
