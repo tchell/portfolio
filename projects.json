@@ -1,4 +1,5 @@
 {
+
   "cambire": {
     "name": "Cambire",
     "desc": "Automation of a custom stock valuation algorithm to pull data on all stocks from the NYSE, NASDAQ, and TSX and analyze it. Displays results via web UI that allows querying for different fundamental values and viewing detailed reports on sepecific companies.",
@@ -17,11 +18,13 @@
     "techs": ["Flutter"],
     "link": "https://github.com/tchell/QuickMeals",
     "img": "/image/quickmeals_demo.gif"
+
   },
   "pomodoro": {
     "name": "Pomodoro Clock",
     "desc": "Pomodoro clock with customizable time settings for breaks and work sessions.",
     "techs": ["React", "Redux", "Sass", "Node", "Express", "Heroku"],
+
     "link": "https://pomodoro.tancloud.host",
     "img": "/image/pomodoro.png"
   },
