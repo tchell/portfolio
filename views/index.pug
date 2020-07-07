@@ -7,7 +7,10 @@ mixin project(attrs)
             .screenshot.col-12.col-md-6.row.justify-content-center.align-items-center
                 a(href=attrs.link, target='_blank' rel="noopener noreferrer")
                     if attrs.img === ""
-                        div.img-fluid Preview Not Available
+                        div.img-fluid 
+                            p Preview Not Yet Available.
+                            br 
+                            p Please check back soon...
                     else if attrs.img.endsWith(".mp4")
                         video(controls).img-fluid
                             source(src=attrs.img, type="video/mp4",
@@ -51,11 +54,11 @@ html(lang='en')
                         img#headshot.img-fluid(src='/image/headshot.jpg', alt='Picture of Tanner')
                     .col-sm-8.order-1.order-sm-2
                         p
-                            | Currently an undergraduate student at the University of Alberta doing a Bachelor of Science.
+                            | I Graduated in Spring of 2019 from the University of Alberta with a Bachelor of Science in Biology with a minor in Computer science. Since then I've been working as a freelance contractor on some software projects. I also work part time at a climbing gym as a Climbing Instructor, Routesetter, and Team Leader. 
                         p
                             | My hobbies include rock climbing, mountain biking, snowboarding, cross country skiing, camping, hiking and just about anything else outdoors.
                         p
-                            | I like the indoors too though and do lots of reading, gaming, and mess around with my Arduino and Raspberry Pi once in a while.
+                            | I like the indoors too though and do lots of reading, gaming (especially getting one tapped in Valorant), and mess around with my Arduino and Raspberry Pi once in a while.
             section#projects.container
                 h1 projects
                 each project in projects
@@ -67,7 +70,7 @@ html(lang='en')
                         li.ed-list-item
                             h2 University of Alberta
                             ul
-                                li Bachelor of Science in Biology (April 2019)
+                                li Bachelor of Science in Biology.
                                 li Minor in Computer Science
                         hr
                         li.ed-list-item
